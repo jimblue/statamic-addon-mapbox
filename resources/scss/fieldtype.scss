@@ -1,0 +1,63 @@
+@import '~mapbox-gl/dist/mapbox-gl.css';
+@import '~@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: calc(9 / 16 * 100%);
+  overflow: hidden;
+  background-color: #fafcff;
+  border-color: #c4ccd4;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mapboxgl-map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-style-list {
+  z-index: 3;
+  display: none;
+
+  button {
+    .mapboxgl-ctrl-group & {
+      display: flex;
+      width: 100%;
+      height: auto;
+      padding: 4px 8px;
+      font-size: 14px;
+      text-align: right;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    + button {
+      border-top: 1px solid #dddddd;
+    }
+  }
+}
+
+.mapboxgl-style-switcher {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMzUuNDM0IDIzNS40MzQiPgogIDxkZWZzLz4KICA8cGF0aCBkPSJNMjMyLjIyNiAyNC41OTFhNy41MDMyIDcuNTAzMiAwIDAwLTYuODc4LS44OWwtNzAuODk0IDI2LjA0NS03MC44OTMtMjYuMDQ1YTcuNTA1NSA3LjUwNTUgMCAwMC01LjE3MyAwTDQuOTE0IDUwLjY5NkMxLjk2MiA1MS43ODEgMCA1NC41OTIgMCA1Ny43MzZ2MTQ2Ljk1NmMwIDIuNDUxIDEuMTk4IDQuNzQ3IDMuMjA3IDYuMTVhNy40OTcxIDcuNDk3MSAwIDAwNC4yOTMgMS4zNWMuODcxIDAgMS43NDctLjE1MSAyLjU4Ni0uNDZsNzAuODg4LTI2LjA0NSA3MC44OTIgMjYuMDQ1YzEuNjY5LjYxMyAzLjUwMi42MTMgNS4xNzMgMGw3My40OC0yNi45OTVjMi45NTItMS4wODUgNC45MTQtMy44OTUgNC45MTQtNy4wNFYzMC43NDFhNy40OTY2IDcuNDk2NiAwIDAwLTMuMjA3LTYuMTV6TTg4LjQ3NSA0MS40ODZsNTguNDc4IDIxLjQ4NHYxMzAuOTc3bC01OC40NzgtMjEuNDg0VjQxLjQ4NnpNMTUgNjIuOTcxbDU4LjQ3NS0yMS40ODR2MTMwLjk3N0wxNSAxOTMuOTQ2VjYyLjk3MXptMjA1LjQzNCAxMDkuNDkybC01OC40OCAyMS40ODRWNjIuOTcxbDU4LjQ4LTIxLjQ4NHYxMzAuOTc2eiIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}

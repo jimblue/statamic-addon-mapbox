@@ -1,0 +1,24 @@
+{
+    "name": "jimblue/mapbox",
+    "type": "statamic-addon",
+    "autoload": {
+        "psr-4": {
+            "Jimblue\\Mapbox\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Mapbox",
+            "description": "Statamic addon that offer a simple way to add amazing map to your website"
+        },
+        "laravel": {
+            "providers": [
+                "Jimblue\\Mapbox\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "statamic/cms": "^3.0"
+    }
+}
